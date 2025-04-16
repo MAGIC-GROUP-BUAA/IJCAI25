@@ -38,11 +38,13 @@ body::before {
     left: 0;
     width: 250px;
     height: 100%;
-    background-color: rgba(184, 194, 204, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);  /* 更浅更柔和 */
     padding: 20px;
     text-align: center;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);  /* 稍大阴影更有层次 */
+    backdrop-filter: blur(12px);               /* 增强玻璃模糊效果 */
+    border-right: 1px solid rgba(255, 255, 255, 0.4); /* 加一点边框提升质感 */
+    z-index: 1000;  /* 确保浮在上层 */
 }
 
 .sidebar img {
@@ -53,31 +55,31 @@ body::before {
 
 .sidebar a {
     display: block;
-    color: #232627;
+    color: #3b3b3b;
     text-decoration: none;
-    margin: 15px 0;  /* 原值是 15px 0，减少垂直间距 */
-    padding: 12px;  /* 原值是 12px，减少内边距 */
-    background-color: rgb(138, 193, 255);
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-size: 16px; /* 可选：稍微缩小字体，让整体更紧凑 */
+    margin: 15px 0;
+    padding: 12px;
+    background-color: #e0f7fa; /* 浅青色背景 */
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar a:hover {
-    background-color: rgba(48, 221, 82, 0.8);
-    color: white;
-    transform: translateX(5px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #b2ebf2; /* 鼠标悬停时更深一点 */
+    color: #004d40;
+    transform: translateX(4px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* 当前页面高亮显示 */
 .sidebar a.active {
-    background-color: rgba(48, 221, 82, 0.8);
-    color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #80deea; /* 当前页面：中等亮度 */
+    color: #004d40;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 .content {
     margin-left: 250px;
